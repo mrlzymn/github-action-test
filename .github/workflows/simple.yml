@@ -4,16 +4,12 @@ on: [push]
 
 jobs:
   run-shell-command:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: echo a string
         run: echo "Hi guys!"
-      - name: multiline script
-        run: |
-          node -v
-          npm -v
   fail-shell-command:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: echo will fail
         run: eccho "Wassup"
